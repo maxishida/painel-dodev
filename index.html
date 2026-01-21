@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel do Dev AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              dark: {
+                bg: '#0f0f12',
+                card: '#16161a',
+                input: '#1e1e24',
+                border: '#27272a'
+              },
+              neon: {
+                cyan: '#06b6d4',
+                purple: '#a855f7',
+                pink: '#ec4899',
+                green: '#10b981',
+                red: '#ef4444'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0d0d0d;
+        color: #d1d5db;
+      }
+      /* Custom Glow Utilities */
+      .glow-border-green {
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.1), inset 0 0 10px rgba(16, 185, 129, 0.05);
+      }
+      .glow-border-red {
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.1), inset 0 0 10px rgba(239, 68, 68, 0.05);
+      }
+      .glow-border-cyan {
+        border: 1px solid rgba(6, 182, 212, 0.3);
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.1), inset 0 0 10px rgba(6, 182, 212, 0.05);
+      }
+      .glow-border-purple {
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.1), inset 0 0 10px rgba(168, 85, 247, 0.05);
+      }
+      .glow-border-blue {
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.1), inset 0 0 10px rgba(59, 130, 246, 0.05);
+      }
+
+      /* Pulse Animations for Active States */
+      @keyframes border-pulse-green {
+        0%, 100% { border-color: rgba(16, 185, 129, 0.3); box-shadow: 0 0 5px rgba(16, 185, 129, 0.1), inset 0 0 2px rgba(16, 185, 129, 0.05); }
+        50% { border-color: rgba(16, 185, 129, 0.8); box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), inset 0 0 10px rgba(16, 185, 129, 0.1); }
+      }
+      .animate-border-pulse-green {
+        animation: border-pulse-green 3s infinite ease-in-out;
+      }
+
+      @keyframes border-pulse-purple {
+        0%, 100% { border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 5px rgba(168, 85, 247, 0.1), inset 0 0 2px rgba(168, 85, 247, 0.05); }
+        50% { border-color: rgba(168, 85, 247, 0.8); box-shadow: 0 0 15px rgba(168, 85, 247, 0.4), inset 0 0 10px rgba(168, 85, 247, 0.1); }
+      }
+      .animate-border-pulse-purple {
+        animation: border-pulse-purple 3s infinite ease-in-out;
+      }
+      
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f0f12; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

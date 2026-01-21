@@ -1,0 +1,5 @@
+{
+  "name": "Painel do Dev AI",
+  "description": "A developer dashboard integrating AI agents, RAG simulation, task management, and calendar in a dark neon UI.",
+  "requestFramePermissions": []
+}
